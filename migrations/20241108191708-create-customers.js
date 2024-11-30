@@ -15,7 +15,7 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
         unique: true,
       },
       contactNumber: {
@@ -24,6 +24,10 @@ module.exports = {
       },
       location: {
         type: Sequelize.STRING,
+        allowNull: false,
+      },
+      password: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
       createdAt: {

@@ -1,82 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vibanda Delivery System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibanda Delivery System</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111; 
+            color: #fff; 
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ff4d4d; 
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav h4 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #d03e3e; 
+            color: #fff;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #111; 
+            padding: 50px 20px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #f3e92e; 
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        header button {
+            background-color: #ff4d4d; 
+            color: white;
+            font-size: 1.1em;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        header button:hover {
+            background-color: #e03e3e; 
+        }
+
+        /* Features Section */
+        .features {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #222; 
+        }
+
+        .features h2 {
+            font-size: 2.2em;
+            color: #f3e92e; 
+            margin-bottom: 30px;
+        }
+
+        .feature {
+            margin-bottom: 40px;
+        }
+
+        .feature h3 {
+            font-size: 1.8em;
+            color: #ff4d4d; 
+        }
+
+        .feature p {
+            font-size: 1.1em;
+            color: #ddd; 
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #111; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
 </head>
 <body>
-  <h1>Vibanda Delivery System</h1>
 
-  <!-- Vendor Section -->
-  <section id="vendor-section">
-    <h2>Vendors</h2>
-    <form id="vendorForm">
-      <input type="text" id="vendorName" placeholder="Name" required />
-      <input type="tel" id="vendorContactNumber" placeholder="Contact Number" required />
-      <input type="text" id="vendorLocation" placeholder="Location" required />
-      <input type="text" id="vendorShopName" placeholder="Shop Name" required />
-      <input type="email" id="vendorEmail" placeholder="Email" required />
-      <button type="submit">Add Vendor</button>
-    </form>
-    <button onclick="getVendors()">View All Vendors</button>
-    <div id="vendorList"></div>
-  </section>
+    <!-- Navigation -->
+    <nav>
+        <h4>VibandaConnect</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to VibandaConnect</h1>
+        <p>Your trusted partner in delivery and vendor management. Let's make your business grow together!</p>
+        <button onclick="window.location.href='login.html';">Get Started</button>
+    </header>
 
-  <!-- Rider section -->
-  <section id="rider-section">
-    <h2>Riders</h2>
-    <form id="riderForm">
-      <input type="text" id="riderName" placeholder="Name" required />
-      <input type="text" id="riderContactNumber" placeholder="Contact Number" required />
-      <input type="text" id="riderVehicleType" placeholder="Vehicle Type" required />
-      <input type="text" id="riderLocation" placeholder="Location" required />
-      <label>
-        Available:
-        <input type="checkbox" id="riderAvailable" />
-      </label>
-      <button type="submit">Add Rider</button>
-    </form>
-    <button onclick="getRiders()">View All Riders</button>
-    <div id="riderList"></div>
-  </section>
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Features</h2>
+        <div class="feature">
+            <h3>Fast Delivery</h3>
+            <p>Experience quick and reliable delivery services tailored to your needs.</p>
+        </div>
+        <div class="feature">
+            <h3>Vendor Management</h3>
+            <p>Manage your vendors effortlessly with our comprehensive tools.</p>
+        </div>
+        <div class="feature">
+            <h3>Customer Support</h3>
+            <p>We are here to help you 24/7 with any inquiries or issues you may have.</p>
+        </div>
+    </section>
 
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 VibandaConnect. All Rights Reserved.</p>
+    </footer>
 
-  <!-- Customer Section -->
-
-  <section id="customer-section">
-    <h2>Customers</h2>
-    <form id="customerForm">
-      <input type="text" id="customerName" placeholder="Name" required />
-      <input type="email" id="customerEmail" placeholder="Email" required />
-      <input type="tel" id="customerContactNumber" placeholder="Contact Number" required />
-      <input type="text" id="customerLocation" placeholder="Location" required />
-      <button type="submit">Add Customer</button>
-    </form>
-    <button onclick="getCustomers()">View All Customers</button>
-    <div id="customerList"></div>
-  </section>
-
-  <!-- Order Section -->
- 
-  <!-- Order Section -->
-<section id="order-section">
-    <h2>Orders</h2>
-    <form id="orderForm">
-      <input type="text" id="orderVendorId" placeholder="Vendor ID" required />
-      <input type="text" id="orderCustomerId" placeholder="Customer ID" required />
-      <input type="text" id="orderRiderId" placeholder="Rider ID (Optional)" />
-      <input type="text" id="orderItems" placeholder="Items (comma-separated)" required />
-      <input type="text" id="orderStatus" placeholder="Status" value="Pending" required />
-      <input type="date" id="orderDeliveryDate" placeholder="Delivery Date" required /> <!-- New field -->
-      <button type="submit">Place Order</button>
-    </form>
-    <button onclick="getOrders()">View All Orders</button>
-    <div id="orderList"></div>
-  </section>
-  
-
-
-  <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

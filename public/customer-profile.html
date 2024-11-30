@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f; 
+            color: #ffffff; 
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1a1a1a; 
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            height: 30px;
+        }
+
+        nav h4 {
+            margin: 0;
+            font-size: 27px;
+            color: #ff4d4d; 
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff4d4d; 
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        /* Profile Container */
+        .profile-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1a1a1a; 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #ff4d4d; 
+        }
+
+        .profile-header h2 {
+            margin: 0;
+            color: #f3e92e; 
+        }
+
+        .profile-details p {
+            margin: 10px 0;
+        }
+
+        .profile-details strong {
+            color: #ff4d4d; 
+        }
+
+        /* Order History Section */
+        .order-history {
+            margin-top: 30px;
+        }
+
+        .order-history h3 {
+            margin-bottom: 10px;
+            color: #ff4d4d; 
+        }
+
+        .order-history ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .order-history li {
+            background-color: #242424; 
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            color: #ffffff; /* Light text */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h4>VibandaConnect</h4>
+        <ul>
+            <li><a href="orders.html">Make Order</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img id="profilePicture" src="https://via.placeholder.com/80" alt="Profile Picture">
+            <h2 id="profileName">Customer Name</h2>
+        </div>
+        <div class="profile-details">
+            <p><strong>Email:</strong> <span id="profileEmail">customer@example.com</span></p>
+            <p><strong>Contact Number:</strong> <span id="profileContactNumber">123-456-7890</span></p>
+            <p><strong>Location:</strong> <span id="profileLocation">Nairobi, Kenya</span></p>
+        </div>
+
+        <div class="order-history">
+            <h3>Order History</h3>
+            <ul id="orderList">
+                <!-- Order items will be injected here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="logout.js"></script>
+    <script src="script.js"></script>
+    <script src="ordersRiders.js"></script>
+    <script src="profileScript.js"></script>
+</body>
+</html>

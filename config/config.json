@@ -7,17 +7,17 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "@hamu",
-    "database": "vibanda_connect",
-    "host": "localhost",
+    "username": "test_user",
+    "password": "test_password",
+    "database": "test_database",
+    "host": "test-db-host",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "@hamu",
-    "database": "vibanda_connect",
-    "host": "localhost",
+    "username": "prod_user",
+    "password": "prod_password",
+    "database": "prod_database",
+    "host": "prod-db-host",
     "dialect": "mysql"
   }
 }

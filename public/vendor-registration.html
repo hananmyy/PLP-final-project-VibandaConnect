@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1a1a1a; 
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            height: 30px;
+        }
+
+        nav h4 {
+            margin: 0;
+            font-size: 27px;
+            color: #ff4d4d;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff4d4d; 
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1a1a1a; 
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form input {
+            width: 100%;
+            max-width: 350px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ff4d4d; 
+            border-radius: 5px;
+            background-color: #0f0f0f; 
+            color: #ffffff; 
+            font-size: 1em;
+        }
+
+        form input::placeholder {
+            color: #aaaaaa; 
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #f3e92e; 
+        }
+
+        /* Button Styles */
+        button {
+            background-color: #1a1a1a; 
+            color: #ff4d4d; 
+            border: 1px solid #ff4d4d; 
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 50%; 
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff4d4d; 
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h4>VibandaConnect</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <form action="/vendors/register" method="POST" id="vendorForm">
+        <input type="text" id="vendorName" name="vendorName" placeholder="Name" required />
+        <input type="email" id="vendorEmail" name="vendorEmail" placeholder="Email" required />
+        <input type="password" id="vendorPassword" name="vendorPassword" placeholder="Password" required />
+        <input type="tel" id="vendorContactNumber" name="vendorContactNumber" placeholder="Contact Number" required />
+        <input type="text" id="vendorLocation" name="vendorLocation" placeholder="Location" required />
+        <input type="text" id="vendorShopName" name="vendorShopName" placeholder="Shop Name" required />
+        <button type="submit">Add Vendor</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

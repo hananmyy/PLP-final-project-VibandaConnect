@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f0f0f; 
+            color: #ffffff; 
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: linear-gradient(90deg, #1a1a1a, #0f0f0f);
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav h4 {
+            margin: 0;
+            font-size: 1.7em;
+            color: #ff4d4d; 
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #d1d1d1; 
+            padding: 0.5em 1em;
+            font-weight: 500;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff4d4d; 
+            color: #ffffff;
+            border-radius: 5px;
+        }
+
+        /* Form Styling */
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 2em;
+            background-color: #1a1a1a; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        form h2 {
+            margin-bottom: 20px;
+            color: #f3e92e; 
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #444444; 
+            border-radius: 5px;
+            background-color: #242424; 
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        form button {
+            width: 100%;
+            background-color: #ff4d4d; 
+            color: #ffffff;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            padding: 0.75em;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        form button:hover {
+            background-color: #e03c3c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h4>VibandaConnect</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="vendor-registration.html">Register Vendor</a></li>
+            <li><a href="rider-registration.html">Register Rider</a></li>
+            <li><a href="customer-registration.html">Register Customer</a></li>
+        </ul>
+    </nav>
+
+    <form id="loginForm">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <select id="loginRole" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="customer">Customer</option>
+            <option value="vendor">Vendor</option>
+            <option value="rider">Rider</option>
+        </select>
+        <button type="submit">Login</button>
+    </form>
+
+    <script src="login.js"></script>
+</body>
+</html>
